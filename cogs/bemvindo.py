@@ -69,7 +69,7 @@ class BemVindo(commands.Cog):
             return
 
         if cargo not in message.author.roles:
-            await message.author.add._roles(cargo)
+            await message.author.add_roles(cargo)
 
             print(
                 f"Cargo {cargo.name} atribuído para"
