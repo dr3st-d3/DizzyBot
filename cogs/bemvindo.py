@@ -28,7 +28,7 @@ class BemVindo(commands.Cog):
             color=discord.Color.from_rgb(0, 0, 255)
         )
 
-        embed.set_thumbnail(url=member.avatar.url)
+        embed.set_thumbnail(url=member.display_avatar.url)
 
         await canal.send(embed=embed)
 
@@ -51,7 +51,7 @@ class BemVindo(commands.Cog):
             color=discord.Color.from_rgb(255, 0, 0)
         )
 
-        embed.set_thumbnail(url=member.avatar.url)
+        embed.set_thumbnail(url=member.display_avatar.url)
 
         await canal.send(embed=embed)
 
