@@ -8,7 +8,7 @@ class BemVindo(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-# Comando de Boas-vindas
+# Comando de Boas-vindass
 
     @commands.Cog.listener()
     async def on_member_join(self, member: discord.Member):
