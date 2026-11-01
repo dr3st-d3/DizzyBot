@@ -55,5 +55,26 @@ class BemVindo(commands.Cog):
 
         await canal.send(embed=embed)
 
+# Atribuindo cargo a novos membros
+
+    @commands.Cog.listener()
+    async def on_message(self, message: discord.Message):
+        if message.author.bot or message.guild is None:
+            return
+
+        cargo = message.guild.get_role(1566285527098064929)
+
+        if cargo is None:
+            print("Cargo não encontrado.")
+            return
+
+        if cargo not in message.author.roles:
+            await message.author.add._roles(cargo)
+
+            print(
+                f"Cargo {cargo.name} atribuído para"
+                f"{message.author.name}"
+            )
+
 async def setup(bot):
     await bot.add_cog(BemVindo(bot))
