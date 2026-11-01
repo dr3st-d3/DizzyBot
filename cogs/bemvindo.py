@@ -21,7 +21,7 @@ class BemVindo(commands.Cog):
         embed = discord.Embed(
             title="Bem-vindo(a) ao servidor! 🎉",
             description=(
-                f"Usuário: {member.mention}"
+                f"Usuário: {member.mention}\n"
                 f"Membro n°: {member.guild.member_count}\n"
                 f"Esperamos que você se divirta, aproveite sua estadia aqui! "
             ),
@@ -45,7 +45,7 @@ class BemVindo(commands.Cog):
         embed = discord.Embed(
             title="Adeus! 😢",
             description=(
-                f"Usuário: {member.mention}"
+                f"Usuário: {member.mention}\n"
                 f"Nos vemos assim que possível!"
             ),
             color=discord.Color.from_rgb(255, 0, 0)
