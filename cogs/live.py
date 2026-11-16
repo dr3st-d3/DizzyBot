@@ -15,7 +15,7 @@ from services.live_monitor import (
 
 
 # CONFIGURAÇÕES
-CANAL_DIVULGACAO = 123456789012345678
+CANAL_DIVULGACAO = 1566523646657433820
 
 
 class Live(commands.Cog):
