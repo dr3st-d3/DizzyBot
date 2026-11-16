@@ -1,6 +1,18 @@
-.env
+# Banco de dados
+data/
+*.sqlite3
 *.db
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Arquivos temporários
 __pycache__/
 *.pyc
-.venv/
+
+# Ambientes virtuais
+.env
 venv/
+.venv/
+
+# Logs
+*.log

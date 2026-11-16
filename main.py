@@ -3,6 +3,7 @@ import discord
 
 from discord.ext import commands
 from dotenv import load_dotenv
+from services.live_monitor import LiveMonitor
 
 load_dotenv()
 
@@ -29,6 +30,9 @@ class DizzyBot(commands.Bot):
         comandos = await self.tree.sync()
         print(f"Comandos sincronizados: {len(comandos)}")
 
+        self.live_monitor = LiveMonitor(self)
+        self.live_monitor.verificar_lives.start()
+    
     async def on_ready(self):
         print(f"{self.user} foi iniciado e está pronto para uso!")
 
